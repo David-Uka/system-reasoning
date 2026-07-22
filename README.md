@@ -6,6 +6,36 @@ skill**: it reviews code, designs, migrations, infrastructure, incidents, and
 performance/reliability questions **from existing behavior outward**, instead
 of judging a proposed fix — or a live symptom — in isolation.
 
+## Install
+
+This repo *is* the skill folder — its name matches the `name` field in
+`SKILL.md`, so you can drop it straight into any of the conventional skill
+directories your agent scans:
+
+```bash
+# Cross-client convention (project-level, works for VS Code/Copilot, Cursor, etc.)
+git clone https://github.com/David-Uka/system-reasoning .agents/skills/system-reasoning
+
+# Cross-client convention (user-level, available in every project)
+git clone https://github.com/David-Uka/system-reasoning ~/.agents/skills/system-reasoning
+
+# Claude / Claude Code (also widely supported for pragmatic compatibility)
+git clone https://github.com/David-Uka/system-reasoning ~/.claude/skills/system-reasoning
+```
+
+Or update in place with `git -C <path> pull`. Some clients (Claude.ai, Claude
+API) instead want the skill uploaded through their own UI/API — see
+[Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude)
+or the [Skills API Quickstart](https://docs.claude.com/en/api/skills-guide#creating-a-skill).
+Check your agent's docs from the [client list](https://agentskills.io/clients)
+for its exact skills path.
+
+Validate the format yourself with the reference tool:
+
+```bash
+skills-ref validate .
+```
+
 > Agent Skills started as an Anthropic project but is now an open standard
 > (see [agentskills.io](https://agentskills.io)) implemented by 40+ AI coding
 > tools — Claude, Claude Code, GitHub Copilot, VS Code, Cursor, OpenAI Codex,
@@ -92,36 +122,6 @@ Domain and mode detail lives in `references/` so the core methodology in
 - `domain-kubernetes.md`, `domain-aws.md`, `domain-ci-cd.md`, `domain-databases.md` — the failure modes generic review misses in each stack.
 - `incident-debugging.md` — the procedure for a live/reported problem instead of a diff.
 - `performance-reliability.md` — the procedure for "is this fast/reliable enough."
-
-## Install
-
-This repo *is* the skill folder — its name matches the `name` field in
-`SKILL.md`, so you can drop it straight into any of the conventional skill
-directories your agent scans:
-
-```bash
-# Cross-client convention (project-level, works for VS Code/Copilot, Cursor, etc.)
-git clone https://github.com/David-Uka/system-reasoning .agents/skills/system-reasoning
-
-# Cross-client convention (user-level, available in every project)
-git clone https://github.com/David-Uka/system-reasoning ~/.agents/skills/system-reasoning
-
-# Claude / Claude Code (also widely supported for pragmatic compatibility)
-git clone https://github.com/David-Uka/system-reasoning ~/.claude/skills/system-reasoning
-```
-
-Or update in place with `git -C <path> pull`. Some clients (Claude.ai, Claude
-API) instead want the skill uploaded through their own UI/API — see
-[Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude)
-or the [Skills API Quickstart](https://docs.claude.com/en/api/skills-guide#creating-a-skill).
-Check your agent's docs from the [client list](https://agentskills.io/clients)
-for its exact skills path.
-
-Validate the format yourself with the reference tool:
-
-```bash
-skills-ref validate .
-```
 
 ## Spec
 
