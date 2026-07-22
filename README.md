@@ -1,4 +1,6 @@
-# system-reasoning
+# **SYSTEM-REASONING**
+
+<img src="./assets/banner.svg" alt="SYSTEM-REASONING — invariants, provenance, concurrency, trade-offs, decide" width="100%">
 
 A systems-reasoning [Agent Skill](https://agentskills.io) for Claude, Cursor,
 Copilot, Codex, and 40+ other AI coding tools. Reviews code, designs,
