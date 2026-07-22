@@ -1,5 +1,5 @@
 ---
-name: audit-system-tradeoffs
+name: system-reasoning
 description: Systems-reasoning skill for change review, architecture/design review, production debugging, incident analysis, and performance/reliability reasoning — with domain playbooks for Kubernetes, AWS, CI/CD, and databases. Use when evaluating a PR, design, or migration for preserved invariants, hidden trade-offs, event and input provenance, concurrency, retries, partial failure, ownership boundaries, architectural smells, or known distributed-system patterns (Saga, Outbox, CQRS, idempotency, circuit breakers); or when diagnosing an incident, a performance regression, or a reliability gap. Produces severity- and confidence-scored findings plus a minimal safe change.
 license: MIT
 metadata:

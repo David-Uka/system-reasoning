@@ -1,4 +1,4 @@
-# audit-system-tradeoffs
+# system-reasoning
 
 An [Agent Skill](https://agentskills.io) — an open, vendor-neutral format for
 extending AI agents with reusable expertise. This one is a **systems-reasoning
@@ -101,13 +101,13 @@ directories your agent scans:
 
 ```bash
 # Cross-client convention (project-level, works for VS Code/Copilot, Cursor, etc.)
-git clone https://github.com/David-Uka/audit-system-tradeoffs .agents/skills/audit-system-tradeoffs
+git clone https://github.com/David-Uka/system-reasoning .agents/skills/system-reasoning
 
 # Cross-client convention (user-level, available in every project)
-git clone https://github.com/David-Uka/audit-system-tradeoffs ~/.agents/skills/audit-system-tradeoffs
+git clone https://github.com/David-Uka/system-reasoning ~/.agents/skills/system-reasoning
 
 # Claude / Claude Code (also widely supported for pragmatic compatibility)
-git clone https://github.com/David-Uka/audit-system-tradeoffs ~/.claude/skills/audit-system-tradeoffs
+git clone https://github.com/David-Uka/system-reasoning ~/.claude/skills/system-reasoning
 ```
 
 Or update in place with `git -C <path> pull`. Some clients (Claude.ai, Claude
