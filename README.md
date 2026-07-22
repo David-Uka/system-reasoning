@@ -10,17 +10,31 @@ behavior outward** — instead of judging a proposed fix in isolation.
 ## Install
 
 This repo *is* the skill folder — drop it straight into any of the
-conventional skill directories your agent scans:
+conventional skill directories your agent scans.
+
+**Cross-client, project-level** (this project only):
 
 ```bash
-# Cross-client (project-level)
 git clone https://github.com/David-Uka/system-reasoning .agents/skills/system-reasoning
+```
 
-# Cross-client (user-level, all projects)
+**Cross-client, user-level** (all your projects):
+
+```bash
 git clone https://github.com/David-Uka/system-reasoning ~/.agents/skills/system-reasoning
+```
 
-# Claude / Claude Code
+**Claude / Claude Code:**
+
+```bash
 git clone https://github.com/David-Uka/system-reasoning ~/.claude/skills/system-reasoning
+```
+
+On native Windows shells (`cmd.exe` / PowerShell), `~` isn't expanded —
+use `$HOME` in PowerShell or run these from Git Bash / WSL instead:
+
+```powershell
+git clone https://github.com/David-Uka/system-reasoning $HOME/.agents/skills/system-reasoning
 ```
 
 Update in place with `git -C <path> pull`. Claude.ai / Claude API users:
