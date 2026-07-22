@@ -1,6 +1,16 @@
 # audit-system-tradeoffs
 
-A [Claude Agent Skill](https://support.claude.com/en/articles/12512176-what-are-skills) that reviews code, workflows, infrastructure, and distributed-system changes **from existing behavior outward** — instead of judging a proposed fix in isolation.
+An [Agent Skill](https://agentskills.io) — an open, vendor-neutral format for
+extending AI agents with reusable expertise. This one reviews code, workflows,
+infrastructure, and distributed-system changes **from existing behavior
+outward**, instead of judging a proposed fix in isolation.
+
+> Agent Skills started as an Anthropic project but is now an open standard
+> (see [agentskills.io](https://agentskills.io)) implemented by 40+ AI coding
+> tools — Claude, Claude Code, GitHub Copilot, VS Code, Cursor, OpenAI Codex,
+> Gemini CLI, Goose, Roo Code, JetBrains Junie, Amp, OpenHands, and more (full
+> list: [agentskills.io/clients](https://agentskills.io/clients)). A skill is
+> just a folder with a `SKILL.md` file — any compatible agent can load it.
 
 The skill forces a fixed reasoning order before any change is accepted:
 
@@ -16,7 +26,8 @@ current behavior and invariants
 
 ## When to use it
 
-Ask Claude to use this skill when reviewing a PR, design doc, or infra/workflow change and you want it checked for:
+Ask your agent to use this skill when reviewing a PR, design doc, or
+infra/workflow change and you want it checked for:
 
 - preserved invariants (not just "does the new code work")
 - event and input provenance across boundaries
@@ -49,7 +60,39 @@ The skill always leads with the decision and next required action, then:
 
 ## Install
 
-**Claude.ai / Claude Code / Claude API** — see [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude) and the [Skills API Quickstart](https://docs.claude.com/en/api/skills-guide#creating-a-skill). Drop this folder (or its `SKILL.md`) in wherever your setup loads custom skills from.
+This repo *is* the skill folder — its name matches the `name` field in
+`SKILL.md`, so you can drop it straight into any of the conventional skill
+directories your agent scans:
+
+```bash
+# Cross-client convention (project-level, works for VS Code/Copilot, Cursor, etc.)
+git clone https://github.com/David-Uka/audit-system-tradeoffs .agents/skills/audit-system-tradeoffs
+
+# Cross-client convention (user-level, available in every project)
+git clone https://github.com/David-Uka/audit-system-tradeoffs ~/.agents/skills/audit-system-tradeoffs
+
+# Claude / Claude Code (also widely supported for pragmatic compatibility)
+git clone https://github.com/David-Uka/audit-system-tradeoffs ~/.claude/skills/audit-system-tradeoffs
+```
+
+Or update in place with `git -C <path> pull`. Some clients (Claude.ai, Claude
+API) instead want the skill uploaded through their own UI/API — see
+[Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude)
+or the [Skills API Quickstart](https://docs.claude.com/en/api/skills-guide#creating-a-skill).
+Check your agent's docs from the [client list](https://agentskills.io/clients)
+for its exact skills path.
+
+Validate the format yourself with the reference tool:
+
+```bash
+skills-ref validate .
+```
+
+## Spec
+
+Built to the [Agent Skills specification](https://agentskills.io/specification):
+YAML frontmatter (`name`, `description`, `license`, `metadata`) + a Markdown
+body, no scripts or bundled resources required for this one.
 
 ## License
 

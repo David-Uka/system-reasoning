@@ -1,6 +1,10 @@
 ---
 name: audit-system-tradeoffs
 description: Review code, workflows, infrastructure, and distributed-system changes from existing behavior outward. Use when evaluating a PR or design for preserved invariants, hidden trade-offs, event and input provenance, concurrency, retries, partial failure, ownership boundaries, unnecessary logic, or system-level regressions caused by a locally correct fix.
+license: MIT
+metadata:
+  author: David Uka
+  version: "1.0"
 ---
 
 # Audit System Trade-offs
