@@ -1,55 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 130" width="1200" height="130">
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0,0 L10,5 L0,10 z" fill="#3fb950"/>
     </marker>
   </defs>
 
-  <rect width="1200" height="320" fill="#0d1117"/>
-
-  <text x="60" y="88" font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace"
-        font-size="58" font-weight="800" letter-spacing="2" fill="#f0f6fc">SYSTEM-REASONING</text>
-
-  <text x="62" y="122" font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace"
-        font-size="19" fill="#8b949e">Systems-reasoning skill for Claude, Cursor, Copilot &amp; 40+ AI coding agents</text>
-
-  <line x1="60" y1="146" x2="1140" y2="146" stroke="#30363d" stroke-width="1"/>
+  <rect width="1200" height="130" fill="#0d1117"/>
 
   <!-- five-pass flow -->
   <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace">
-    <!-- box template: x, label-number, label-text -->
     <g>
-      <rect x="60" y="210" width="188" height="66" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
-      <text x="154" y="238" font-size="13" fill="#3fb950" text-anchor="middle" font-weight="700">01</text>
-      <text x="154" y="260" font-size="16" fill="#e6edf3" text-anchor="middle" font-weight="700">INVARIANTS</text>
+      <rect x="60" y="32" width="188" height="66" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+      <text x="154" y="60" font-size="13" fill="#3fb950" text-anchor="middle" font-weight="700">01</text>
+      <text x="154" y="82" font-size="16" fill="#e6edf3" text-anchor="middle" font-weight="700">INVARIANTS</text>
     </g>
-    <line x1="248" y1="243" x2="288" y2="243" stroke="#3fb950" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="248" y1="65" x2="288" y2="65" stroke="#3fb950" stroke-width="2" marker-end="url(#arrow)"/>
 
     <g>
-      <rect x="298" y="210" width="188" height="66" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
-      <text x="392" y="238" font-size="13" fill="#3fb950" text-anchor="middle" font-weight="700">02</text>
-      <text x="392" y="260" font-size="16" fill="#e6edf3" text-anchor="middle" font-weight="700">PROVENANCE</text>
+      <rect x="298" y="32" width="188" height="66" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+      <text x="392" y="60" font-size="13" fill="#3fb950" text-anchor="middle" font-weight="700">02</text>
+      <text x="392" y="82" font-size="16" fill="#e6edf3" text-anchor="middle" font-weight="700">PROVENANCE</text>
     </g>
-    <line x1="486" y1="243" x2="526" y2="243" stroke="#3fb950" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="486" y1="65" x2="526" y2="65" stroke="#3fb950" stroke-width="2" marker-end="url(#arrow)"/>
 
     <g>
-      <rect x="536" y="210" width="188" height="66" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
-      <text x="630" y="238" font-size="13" fill="#3fb950" text-anchor="middle" font-weight="700">03</text>
-      <text x="630" y="260" font-size="16" fill="#e6edf3" text-anchor="middle" font-weight="700">CONCURRENCY</text>
+      <rect x="536" y="32" width="188" height="66" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+      <text x="630" y="60" font-size="13" fill="#3fb950" text-anchor="middle" font-weight="700">03</text>
+      <text x="630" y="82" font-size="16" fill="#e6edf3" text-anchor="middle" font-weight="700">CONCURRENCY</text>
     </g>
-    <line x1="724" y1="243" x2="764" y2="243" stroke="#3fb950" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="724" y1="65" x2="764" y2="65" stroke="#3fb950" stroke-width="2" marker-end="url(#arrow)"/>
 
     <g>
-      <rect x="774" y="210" width="188" height="66" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
-      <text x="868" y="238" font-size="13" fill="#3fb950" text-anchor="middle" font-weight="700">04</text>
-      <text x="868" y="260" font-size="16" fill="#e6edf3" text-anchor="middle" font-weight="700">TRADE-OFFS</text>
+      <rect x="774" y="32" width="188" height="66" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+      <text x="868" y="60" font-size="13" fill="#3fb950" text-anchor="middle" font-weight="700">04</text>
+      <text x="868" y="82" font-size="16" fill="#e6edf3" text-anchor="middle" font-weight="700">TRADE-OFFS</text>
     </g>
-    <line x1="962" y1="243" x2="1002" y2="243" stroke="#3fb950" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="962" y1="65" x2="1002" y2="65" stroke="#3fb950" stroke-width="2" marker-end="url(#arrow)"/>
 
     <g>
-      <rect x="1012" y="210" width="128" height="66" rx="8" fill="#1f6feb" stroke="#58a6ff" stroke-width="1.5"/>
-      <text x="1076" y="238" font-size="13" fill="#d2e3fc" text-anchor="middle" font-weight="700">05</text>
-      <text x="1076" y="260" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="700">DECIDE</text>
+      <rect x="1012" y="32" width="128" height="66" rx="8" fill="#1f6feb" stroke="#58a6ff" stroke-width="1.5"/>
+      <text x="1076" y="60" font-size="13" fill="#d2e3fc" text-anchor="middle" font-weight="700">05</text>
+      <text x="1076" y="82" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="700">DECIDE</text>
     </g>
   </g>
 </svg>
